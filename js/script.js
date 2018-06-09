@@ -8,27 +8,32 @@ document.getElementById('loadQuote').addEventListener("click", randomBackground,
 var quotes = [
   {
     quote: "The first step toward success is taken when you refuse to be a captive of the environment in which you first find yourself.",
-    source: "Mark Caine"
+    source: "Mark Caine",
+    tags: ['inspirational', 'success']
   },
   {
     quote: "Nothing in life is as important as you think it is, while you are thinking about it.",
     source: "Daniel Kahneman",
     citation: "Thinking, Fast and Slow",
-    year: 2011
+    year: 2011,
+    tags: ['life']
   },
   {
     quote: "Beauty is power; a smile is its sword.",
     source: "John Ray",
+    tags: ['inspirational', 'life']
   },
   {
     quote: "What nicer thing can you do for somebody than make them breakfast?",
     source: "Anthony Bourdain",
+    tags: ['nice', 'kind']
   },
   {
     quote: "Open your eyes and see what you can with them before they close forever.",
     source: "Anthony Doerr",
     citation: "All the Light We Cannot See",
-    year: 2014
+    year: 2014,
+    tags: ['life', 'inspirational']
   }
 ];
 
@@ -53,6 +58,9 @@ function printQuote() {
     print += '<span class="year">' + quote.year + '</span>';
   }
   print += '</p>'
+  if (quote.tags) {
+    print += '<p>' + 'tags: ' + quote.tags.join(', ') + '</p>';
+  }
   // This sets the HTML to the quote
   document.getElementById('quote-box').innerHTML = print;
 }
