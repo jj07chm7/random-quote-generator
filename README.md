@@ -1,2 +1,2 @@
 # random-quote-generator
-Random Quote Generator
+This is a project for the Full Stack JavaScript Treehouse Techdegree program
